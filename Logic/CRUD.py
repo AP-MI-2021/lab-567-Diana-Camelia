@@ -1,4 +1,4 @@
-from Domain.rezervare import getNume, getClasa, toString, getAll, creeazaRezervare, getId, creeazaRezervare
+from Domain.rezervare import getNume, getClasa, toString, getAll, getId, creeazaRezervare
 
 
 def adaugaRezervare(id, nume, clasa, pret, checkin, lista):

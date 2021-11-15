@@ -19,3 +19,4 @@ def testAll():
     testOrdonare()
     testAfisareSumaPreturilorFiecareNume()
     testUndoRedo()
+    
