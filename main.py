@@ -1,16 +1,25 @@
-from Logic.CRUD import adaugaRezervare
-from Tests.TestAll import runAllTests
-from UI.console import runMenu
+from Tests.testAll import testAll
+from UI.console import meniu
 
 
 def main():
-    runAllTests()
     lista = []
-    lista = adaugaRezervare(1, "mihai", "business", 149.99, "DA", lista)
-    lista = adaugaRezervare(2, "diana", "economy", 29.99, "NU", lista)
-    lista = adaugaRezervare(3, "marcela", "economy plus", 75.99, "DA", lista)
-    lista = adaugaRezervare(4, "gabi", "business", 199.99, "DA", lista)
-    runMenu(lista)
+    testAll()
+    undoList = []
+    redoList = []
+    print("Toate functiile de calcul au trecut testele! Felicitari! ")
+    while True:
+        print("Pentru meniu tastati '1'. ")
+        print("Pentru a inchide tastati 'x'. ")
+        print("Introduceti optiunea: ")
+        optiune = input()
+        if optiune == "1":
+            meniu(lista, undoList, redoList)
+        elif optiune == "x":
+            break
+        else:
+            print("Optiune gresita! Reincercati! ")
 
 
-main()
+if __name__ == '__main__':
+    main()
